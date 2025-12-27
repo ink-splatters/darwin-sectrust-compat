@@ -6,15 +6,11 @@ provides symbol `_SecTrustCopyCertificateChain` (macOS 12+ API) on earlier macOS
 
 ## Motivation
 
-Enabling `go` toolchain and binaries, compiled by it, on `macOS Big Sur`.
-
-While there are potentially more use cases, the above is the only one, tested by the author.
+Make `go 1.25` toolchain and binaries, produced by it, run on macOS Big Sur.
 
 ## Building
 
-### With make (Xcode)
-
-*NOTE*: Makefile sets `-DSECTRUST_COMPAT` to enable building the shim for macOS SDK 12+
+### With make (Xcode required)
 
 ```sh
 make
@@ -54,3 +50,15 @@ _SecTrustCopyCertificateChain
 go version go1.25.4 darwin/arm64
 
 ```
+
+## Shim availability
+
+As a safenet, the shim is disabled if newer macOS SDK is detected. 
+
+To override this behavior, use `-DSECTRUST_COMPAT`.
+
+Details: [security_compat.c](./security_compat.c)
+
+## License
+
+[MIT](./LICENSE)
