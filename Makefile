@@ -1,5 +1,5 @@
 CC ?= clang
-CFLAGS ?= -Wall -Wextra -O2 -mcpu=native -DSECTRUST_COMPAT
+CFLAGS ?= -Wall -Wextra -O2 -DSECTRUST_COMPAT
 LDFLAGS ?= -dynamiclib -Wl,-exported_symbol,_SecTrustCopyCertificateChain -framework Security -framework CoreFoundation
 SRC = security_compat.c
 TARGET = libsecurity_compat.dylib

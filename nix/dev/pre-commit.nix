@@ -14,6 +14,7 @@
           enable = true;
           settings.configuration = {
             MD013 = false; # Disable line length
+            MD026 = false; # Allow no-trailing-punctuation, e.g. `Option A.`
             MD033 = false; # Allow inline HTML
             MD040 = false; # Don't require language for code blocks
           };
