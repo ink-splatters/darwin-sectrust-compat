@@ -53,7 +53,7 @@ go version go1.25.4 darwin/arm64
 
 ### Go Module
 
-See [examples/hello](./examples/hello/README.md)
+See [examples/hello-bigsur](./examples/hello-bigsur/README.md)
 
 ## Shim availability
 
