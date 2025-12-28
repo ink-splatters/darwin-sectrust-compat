@@ -3,7 +3,6 @@
   # https://flake.parts/options/flake-parts-partitions.html
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/24.11";
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     git-hooks = {
       url = "github:cachix/git-hooks.nix";
       inputs.nixpkgs.follows = "nixpkgs";

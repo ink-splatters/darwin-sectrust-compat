@@ -26,8 +26,9 @@
         hello-bigsur =
           toolchain.buildGo125Module {
             name = "hello-bigsur";
-            src = "${src}/examples/hello-bigsur";
-            vendorHash = "sha256-rBMT8t76B9TnwvhzBSUG9KBEbyx1zn7J2Yc2C48SZ48=";
+            inherit src;
+            modRoot = "./examples/hello-bigsur";
+            vendorHash = "sha256-9j+EXca38U0H8WLmmW6BU5lZn/JgO+W+rLxP6p0nVfQ=";
 
             env.CGO_ENABLED = 1;
           }
